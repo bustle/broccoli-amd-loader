@@ -1,0 +1,28 @@
+{
+  "name": "broccoli-amd-loader",
+  "version": "0.1.0",
+  "description": "provides a broccoli tree with a loader.js in it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/201-created/broccoli-amd-loader.git"
+  },
+  "keywords": [
+    "broccoli-plugin"
+  ],
+  "author": "Cory Forsyth <cory.forsyth@gmail.com> (http://coryforsyth.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/201-created/broccoli-amd-loader/issues"
+  },
+  "homepage": "https://github.com/201-created/broccoli-amd-loader",
+  "dependencies": {
+    "broccoli-funnel": "^0.2.3",
+    "broccoli-merge-trees": "^0.2.1",
+    "loader.js": "^3.2.0",
+    "lodash": "^3.10.0"
+  }
+}
