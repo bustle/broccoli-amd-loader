@@ -1,13 +1,14 @@
 'use strict';
-var funnel = require('broccoli-funnel');
-var merge = require('broccoli-merge-trees');
+var Funnel = require('broccoli-funnel');
+var Merge = require('broccoli-merge-trees');
 var path = require('path');
+var Plugin = require('broccoli-plugin');
 
 var defaultDestDir = '/';
 
 function loaderTree(destDir) {
   var loaderDir = path.dirname(require.resolve('loader.js'));
-  return funnel(loaderDir, {
+  return new Funnel(loaderDir, {
     include: ['loader.js'],
     destDir: destDir
   });
@@ -17,5 +18,5 @@ module.exports = function(tree, options) {
   options = options || {};
   var destDir = options.destDir || defaultDestDir;
 
-  return merge([tree, loaderTree(destDir)]);
+  return new Merge([tree, loaderTree(destDir)]);
 };
